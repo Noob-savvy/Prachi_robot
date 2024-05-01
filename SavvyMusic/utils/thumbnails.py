@@ -7,13 +7,20 @@ import aiohttp
 import numpy as np
 import random
 
-from PIL import Image, ImageChops, ImageOps, ImageDraw, ImageEnhance, ImageFilter, ImageFont
+from PIL import (
+    Image,
+    ImageChops,
+    ImageOps,
+    ImageDraw,
+    ImageEnhance,
+    ImageFilter,
+    ImageFont,
+)
 from youtubesearchpython.__future__ import VideosSearch
 
 from SavvyMusic import app
 from Backgrounds import thumbs, colors
 from config import YOUTUBE_IMG_URL
-
 
 
 def changeImageSize(maxWidth, maxHeight, image):
@@ -70,14 +77,16 @@ async def gen_thumb(videoid, user_id):
 
         try:
             wxyz = await app.get_profile_photos(user_id)
-            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
+            wxy = await app.download_media(
+                wxyz[0]["file_id"], file_name=f"{user_id}.jpg"
+            )
         except:
             abc = await app.get_profile_photos(app.id)
-            wxy = await app.download_media(abc[0]['file_id'], file_name=f'{app.id}.jpg')
+            wxy = await app.download_media(abc[0]["file_id"], file_name=f"{app.id}.jpg")
         xy = Image.open(wxy)
-        a = Image.new('L', [640, 640], 0)
+        a = Image.new("L", [640, 640], 0)
         b = ImageDraw.Draw(a)
-        b.pieslice([(0, 0), (640,640)], 0, 360, fill = 255, outline = "white")
+        b.pieslice([(0, 0), (640, 640)], 0, 360, fill=255, outline="white")
         c = np.array(xy)
         d = np.array(a)
         e = np.dstack((c, d))
@@ -212,14 +221,16 @@ async def gen_qthumb(videoid, user_id):
 
         try:
             wxyz = await app.get_profile_photos(user_id)
-            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
+            wxy = await app.download_media(
+                wxyz[0]["file_id"], file_name=f"{user_id}.jpg"
+            )
         except:
             abc = await app.get_profile_photos(app.id)
-            wxy = await app.download_media(abc[0]['file_id'], file_name=f'{app.id}.jpg')
+            wxy = await app.download_media(abc[0]["file_id"], file_name=f"{app.id}.jpg")
         xy = Image.open(wxy)
-        a = Image.new('L', [640, 640], 0)
+        a = Image.new("L", [640, 640], 0)
         b = ImageDraw.Draw(a)
-        b.pieslice([(0, 0), (640,640)], 0, 360, fill = 255, outline = "white")
+        b.pieslice([(0, 0), (640, 640)], 0, 360, fill=255, outline="white")
         c = np.array(xy)
         d = np.array(a)
         e = np.dstack((c, d))
