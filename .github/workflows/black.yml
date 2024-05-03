@@ -21,7 +21,7 @@ jobs:
           title: Format code.
           body: Automated code formatting.
           labels: ⚫️ black
-          branch: autofix
+          branch: main
           committer: Noob savvy<Noob savvy@users.noreply.github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: true
