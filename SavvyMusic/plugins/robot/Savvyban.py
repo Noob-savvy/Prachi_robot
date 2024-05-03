@@ -4,7 +4,7 @@ from SavvyMusic import app, userbot
 from SavvyMusic.misc import SUDOERS
 from pyrogram import * 
 from pyrogram.types import *
-from SavvyMusic.utils.savvy_ban import admin_filter
+from SavvyMusic.utils.Savvy_ban import admin_filter
 
 
 
