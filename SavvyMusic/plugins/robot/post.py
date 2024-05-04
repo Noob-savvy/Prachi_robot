@@ -1,8 +1,9 @@
 from pyrogram import Client, filters
 from SavvyMusic import app
-from config import OWNER_ID, BOT_USERNAME
+from config import OWNER_ID
 from pyrogram.types import Message
 
+BOT_USERNAME = {app.username}
 
 @app.on_message(filters.command(["post"], prefixes=["/", "."]) & filters.user(OWNER_ID))
 async def copy_messages(_, message):
