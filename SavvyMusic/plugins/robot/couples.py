@@ -9,7 +9,7 @@ from pyrogram.enums import *
 
 #BOT FILE NAME
 from SavvyMusic import app as app
-from SavvyMusic.database.couples_db import _get_image, get_couple
+from SavvyMusic.utils.database.couples_db import _get_image, get_couple
 
 def dt():
     now = datetime.now()
