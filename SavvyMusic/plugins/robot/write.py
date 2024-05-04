@@ -1,8 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-from config import  BOT_USERNAME
 from SavvyMusic import app as app
 import requests
+from config import MUSIC_BOT_NAME
+BOT_USERNAME = {app.username}
+
 
 @app.on_message(filters.command("write"))
 async def handwrite(_, message: Message):
@@ -15,7 +17,7 @@ async def handwrite(_, message: Message):
 
     caption = f"""
 sᴜᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
-✨ ᴡʀɪᴛᴛᴇɴ ʙʏ : [Divu](https://t.me/{BOT_USERNAME})
+✨ ᴡʀɪᴛᴛᴇɴ ʙʏ : [{MUSIC_BOT_NAME}](https://t.me/{BOT_USERNAME})
 🥀 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {message.from_user.mention}
 """
     await m.delete()
