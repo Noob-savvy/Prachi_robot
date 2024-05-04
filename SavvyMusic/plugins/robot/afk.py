@@ -4,7 +4,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 from SavvyMusic import app
 from SavvyMusic.utils.formatters import get_readable_time
-from SavvyMuisc.utils.database.afkdb import add_afk, is_afk, remove_afk
+from SavvyMusic.utils.database.afkdb import add_afk, is_afk, remove_afk
 
 BOT_USERNAME = {app.username}
 
