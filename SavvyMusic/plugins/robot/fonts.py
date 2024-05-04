@@ -1,7 +1,7 @@
 from pyrogram import  filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from SavvyMusic.utils.font import Fonts
+from SavvyMusic.utils.fonts import Fonts
 from SavvyMusic import app
 
 @app.on_message(filters.command(["font", "fonts"]))
