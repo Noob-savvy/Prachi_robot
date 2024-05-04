@@ -1,5 +1,4 @@
 from SavvyMusic import app as app
-from config import BOT_USERNAME
 from pyrogram import filters
 from pyrogram.types import (
     InlineQueryResultArticle, InputTextMessageContent,
@@ -9,6 +8,8 @@ from pyrogram.types import (
 whisper_db = {}
 
 switch_btn = InlineKeyboardMarkup([[InlineKeyboardButton("💒 Start Whisper", switch_inline_query_current_chat="")]])
+
+BOT_USERNAME = {app.username}
 
 async def _whisper(_, inline_query):
     data = inline_query.query
