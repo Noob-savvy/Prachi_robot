@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from SavvyMusic import OWNER_ID
+from config import OWNER_ID
 from SavvyMusic import app as bot
 
 
