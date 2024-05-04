@@ -15,7 +15,9 @@ from pyrogram.errors import (
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from SavvyMusic import app
-from config import BOT_USERNAME
+
+BOT_USERNAME = {app.username}
+
 from SavvyMusic.utils.errors import capture_err
 
 from SavvyMusic.utils.files import (
