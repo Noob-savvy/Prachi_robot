@@ -4,7 +4,7 @@ from SavvyMusic import app
 
 waifu_api_url = 'https://api.waifu.im/search'
 
-# IAM_DAXX
+
 
 def get_waifu_data(tags):
     params = {
