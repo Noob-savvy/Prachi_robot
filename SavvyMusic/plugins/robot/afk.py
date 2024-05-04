@@ -1,5 +1,4 @@
 import time, re
-from config import BOT_USERNAME
 from pyrogram.enums import MessageEntityType
 from pyrogram import filters
 from pyrogram.types import Message
@@ -7,7 +6,7 @@ from SavvyMusic import app
 from SavvyMusic.utils.formatters import get_readable_time
 from SavvyMuisc.utils.database.afkdb import add_afk, is_afk, remove_afk
 
-
+BOT_USERNAME = {app.username}
 
 @app.on_message(filters.command(["afk", "bye"], prefixes=["/", "!", ""]))
 async def active_afk(_, message: Message):
