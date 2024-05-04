@@ -31,7 +31,7 @@ async def add_userdata(user_id: int, username, first_name, last_name):
         upsert=True,
     )
 
-async def check_imposter(chat_id: int) -> bool:
+async def check_pretender(chat_id: int) -> bool:
     chat = await impdb.find_one({"chat_id_toggle": chat_id})
     return bool(chat)
 
