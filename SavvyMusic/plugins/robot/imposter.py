@@ -1,6 +1,6 @@
 from pyrogram import filters
 from pyrogram.types import Message
-from SavvyMusic.utils.database.pretenderdb import impo_off, impo_on, check_pretender, add_userdata, get_userdata, usr_data
+from SavvyMusic.utils.database.imposterdb import impo_off, impo_on, check_pretender, add_userdata, get_userdata, usr_data
 from SavvyMusic import app
 
 
