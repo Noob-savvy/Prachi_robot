@@ -1,7 +1,7 @@
 import random, os
 from pyrogram import Client, filters, enums 
 from SavvyMusic import app
-from config import BOT_USERNAME
+BOT_USERNAME = {app.username}
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
