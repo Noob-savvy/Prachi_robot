@@ -1,6 +1,7 @@
 from pyrogram import Client, filters
 from SavvyMusic import app
-from config import BOT_USERNAME
+
+BOT_USERNAME = {app.username}
 
 
 def hex_to_text(hex_string):
