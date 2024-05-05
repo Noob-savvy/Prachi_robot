@@ -54,7 +54,7 @@ class temp:
 
 
 
-def circle(pfp, size=(500, 500)):
+def circle(pfp, size=(250, 250)):
     pfp = pfp.resize(size, Image.LANCZOS).convert("RGBA")
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
     mask = Image.new("L", bigsize, 0)
@@ -149,17 +149,17 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 member.chat.id,
                 photo=welcomeimg,
                 caption=f"""
-**❅────✦𝐖ᴇʟᴄᴏᴍᴇ 𝐓ᴏ✦────❅
+**❅──✦𝐖ᴇʟᴄᴏᴍᴇ 𝐓ᴏ✦──❅
  ➻ {member.chat.title}
-┏━━━━━━━━━━━━━━━━━━━━━━━━┓
+┏━━━━━━━━━━━━━━━━━━━━┓
 ➻ 𝐍ᴀᴍᴇ ✧ {user.mention}
 ➻ 𝐈ᴅ ✧ {user.id}
 ➻ 𝐔sᴇʀɴᴀᴍᴇ ✧ @{user.username}
 ➻ 𝐓ᴏᴛᴀʟ 𝐌ᴇᴍʙᴇʀs ✧ {count}
 ➻ 𝐏ᴏᴡᴇʀᴇᴅ 𝐁ʏ ✧ {app.name}
-➻ 𝐌ᴀᴅᴇ 𝐖ɪᴛʜ ❤️𝐁ʏ [𝕯𝖎𝖛𝖞𝖆𝖓𝖘𝖍𝖚 𝕽𝖆𝖓𝖆](https://t.me/about_ranavanshi_divy)
-┗━━━━━━━━━━━━━━━━━━━━━━━━┛**
-**❅─────✧❅✦❅✧─────❅**
+➻ 𝐌ᴀᴅᴇ 𝐖ɪᴛʜ ❤️𝐁ʏ [𝕯𝖎𝖛𝖞𝖆𝖓𝖘𝖍𝖚](https://t.me/about_ranavanshi_divy)
+┗━━━━━━━━━━━━━━━━━━━━┛**
+**❅───✧❅✦❅✧───❅**
 """,
              reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton(button_text, url=deep_link)],
