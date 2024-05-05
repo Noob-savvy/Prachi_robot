@@ -409,7 +409,7 @@ class Call(PyTgCalls):
                         text=_["call_9"],
                     )
                 theme = await check_theme(chat_id)
-                img = await gen_thumb(videoid, userid, theme)
+                img = await gen_thumb(videoid, userid)
                 button = telegram_markup(_, chat_id)
                 run = await app.send_photo(
                     original_chat_id,
@@ -469,7 +469,7 @@ class Call(PyTgCalls):
                         text=_["call_9"],
                     )
                 theme = await check_theme(chat_id)
-                img = await gen_thumb(videoid, userid, theme)
+                img = await gen_thumb(videoid, userid)
                 button = stream_markup(_, videoid, chat_id)
                 await mystic.delete()
                 run = await app.send_photo(
