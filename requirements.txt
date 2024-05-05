@@ -28,7 +28,7 @@ yt-dlp
 numpy
 Flask
 gunicorn
-
+telethon
 
 bard
 SpeechRecognition
