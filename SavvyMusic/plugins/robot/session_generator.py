@@ -29,7 +29,7 @@ from config import API_HASH, API_ID
 COMMAND_HANDLER = "/"
 
 
-LOGGER = getLogger(_name_)
+LOGGER = getLogger(__name__)
 
 __MODULE__ = "SessionGen"
 __HELP__ = """
