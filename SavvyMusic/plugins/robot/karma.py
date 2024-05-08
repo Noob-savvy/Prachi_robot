@@ -1,7 +1,7 @@
 import asyncio
 
 from pyrogram import filters
-
+from config import OWNER_ID
 from SavvyMusic import app as pbot
 from SavvyMusic.utils.admins import can_change_info
 from SavvyMusic.utils.errors import capture_err
