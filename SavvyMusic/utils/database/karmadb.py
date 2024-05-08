@@ -1,13 +1,9 @@
 from typing import Dict, Union
 
-from motor.motor_asyncio import AsyncIOMotorClient as MongoCli
+from SavvyMusic.core.mongo import mongodb
 
-from config import MONGO_DB_URI
+karmadb = mongodb.karma
 
-mongo = MongoCli(MONGO_DB_URI)
-db = mongo.SavvyMusic
-
-karmadb = db.karma
 
 
 async def get_karmas_count() -> dict:
