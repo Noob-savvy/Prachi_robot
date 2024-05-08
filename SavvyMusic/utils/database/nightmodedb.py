@@ -1,11 +1,7 @@
 from typing import Dict, List, Union
-from config import MONGO_DB_URI
-from motor.motor_asyncio import AsyncIOMotorClient as MongoCli
+from SavvyMusic.core.mongo import mongodb
 
-
-mongo = MongoCli(MONGO_DB_URI).Rankings
-
-nightdb = mongo.nightmode
+nightdb = mongodb.nightmode
 
 
 async def nightmode_on(chat_id : int) :
