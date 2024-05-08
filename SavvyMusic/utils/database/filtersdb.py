@@ -1,6 +1,10 @@
-from SavvyMusic.utils.mongo import db
 
-filters = db.filters["filters"] 
+
+from SavvyMusic.core.mongo import mongodb
+
+filters = mongodb.filters
+
+
 
 async def add_filter_db(chat_id: int, filter_name: str, content: str, text: str, data_type: int):
    filter_data = await filters.find_one(
